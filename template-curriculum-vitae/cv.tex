@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Freeman Curriculum Vitae
+% XeLaTeX Template
+% Version 3.0 (September 3, 2021)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%!TEX program = xelatex
+% NOTE: this template must be compiled with XeLaTeX rather than PDFLaTeX
+% due to the custom fonts used. The line above should ensure this happens
+% automatically, but if it doesn't, your LaTeX editor should have a simple toggle
+% to switch to using XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+	10pt,
+    ngerman,
+]{FreemanCV}
+
+% \usepackage{showframe}
+
+\begin{document}
+
+% \includepdf[pages=-]{Anschreiben_Praktikum/anschreiben.pdf}
+
+% \begin{titlepage}
+%     \centering
+%     \vspace*{\fill}
+%     \Huge\textbf{\color{headings}Curriculum Vitae} \par
+%     Jason Schritt \par
+%     \vspace{3cm}
+%     \includegraphics[width=0.6\textwidth,keepaspectratio]{profile-round.png}
+%     \vspace*{\fill}
+% \end{titlepage}
+
+\input{tex/contact.tex}
+\input{tex/jobs.tex}
+\input{tex/education.tex}
+\input{tex/it-skills.tex}
+\input{tex/intrests.tex}
+\input{tex/end.tex}
+\include{tex/certs.tex}
+
+\end{document}
+

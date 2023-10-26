@@ -1,0 +1,98 @@
+\documentclass[
+    DIN, 10pt, pagenumber=false, parskip=half,
+    fromalign=right,
+    fromrule=false,
+    foldmarks=true,
+]{scrlttr2}
+
+% 10pt is the font size.
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{textcomp}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+\RequirePackage{graphicx}
+\usepackage{hyphenat}
+\hyphenation{Mathe-matik wieder-gewinnen}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{lipsum}
+
+%===================================
+
+\usepackage[
+    a4paper, % Paper size
+    top=1.69cm, % Top margin
+    bottom=1.69cm, % Bottom margin
+    left=2.41cm, % Left margin
+    right=2cm, % Right margin
+    footskip=1cm, % Space from the bottom margin to the baseline of the footer
+    headsep=0.5cm, % Space from the top margin to the baseline of the header
+    headheight=1cm, % Height of the header
+    %showframe % Uncomment to show frames around the margins for debugging purposes
+]{geometry}
+
+\usepackage[
+    pdfauthor={Name},
+    pdftitle={Brief - Name},
+    pdfsubject={},
+    pdfkeywords={Brief, Name},
+    pdfproducer={Latex with hyperref},
+    pdfcreator={xelatex},
+    pdfpagelabels % this is used that one warning is not present anymore
+]{hyperref}
+
+\definecolor{text}{HTML}{2b2b2b}
+\definecolor{headings}{HTML}{185978}
+\definecolor{shade}{HTML}{ffe082}
+\definecolor{linkcolor}{HTML}{185978}
+% Set the default text color
+\color{text}
+
+\renewcommand*{\raggedsignature}{\raggedright}
+
+%===================================
+
+ % Sender
+\setkomavar{fromname}{Name}
+\setkomavar{fromaddress}{Addresse\\Addresse}
+
+% With Signature
+% Works best with transparent background.
+% \setkomavar{signature}{
+%     \hspace*{-0.48cm}
+%     \begin{minipage}[t]{\linewidth}
+%         \vspace*{-1.7cm}
+%         \includegraphics[width=3cm,keepaspectratio]{../signature.png}
+%     \end{minipage}\\
+%     \vspace*{-0.7cm}Name
+% }
+
+% Without Signature
+\setkomavar{signature}{Name}
+
+\begin{document}
+
+% Receiver
+\begin{letter}{Name\\Addresse\\Addresse}
+
+%===================================
+
+\opening{\textbf{\color{headings}{Überschrift}}}
+
+Sehr geehrte Damen und Herren,
+
+\lipsum[1-4]
+
+\closing{Mit freundlichen Grüßen}
+
+%===================================
+
+\setkomavar*{enclseparator}{Anlage}
+\encl{Dokumente}
+
+\end{letter}
+
+\end{document}
